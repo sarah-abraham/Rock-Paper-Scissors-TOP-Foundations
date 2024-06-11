@@ -1,0 +1,32 @@
+*{
+    font-family: Varela, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: #EAC5B0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #F50CA0;
+    border: 10px dotted #43DDE2;
+    border-radius: 10px;
+    width: 80vw;
+    height: 40vw;
+    margin: 2%;
+    text-align: center;
+    align-content: center;
+}
+
+.container-title{
+    font-size: 100px;
+    color: #F9F940;
+}
+
+.container-text{
+    font-size: 30px;
+    color: #011064;
+}
