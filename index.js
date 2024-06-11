@@ -11,7 +11,7 @@ function getHumanChoice(){
     }
     if(!choices.includes(selectedHumanChoice)){
         console.log("Invalid choice");
-        getHumanChoicee();
+        getHumanChoice();
     }
     return selectedHumanChoice
 }
@@ -38,27 +38,52 @@ function playRound(humanChoice, computerChoice){
     return flag
 }
 
-let computerChoice = getComputerChoice();
-console.log(`Computer's choice: ${computerChoice}`)
-let humanChoice = getHumanChoice();
-let computerScore = 0;
-let humanScore = 0;
-let winner = playRound(humanChoice, computerChoice);
-if(winner==0){
-    computerScore++;
-    console.log(`Computer's score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+function playGame(){
+    let i;
+    let computerScore = 0;
+    let humanScore = 0;
+    for(i=0;i<5;i++){
+        console.log(`Round ${i+1}: `)
+        let computerChoice = getComputerChoice();
+        console.log(`Computer's choice: ${computerChoice}`)
+        let humanChoice = getHumanChoice();
+        console.log(`Your choice: ${humanChoice}`)
+        let winner = playRound(humanChoice, computerChoice);
+        if(winner==0){
+            computerScore++;
+            console.log(`Computer's score: ${computerScore}`);
+            console.log(`Your score: ${humanScore}`);
+        }
+        else if(winner==2){
+            computerScore++;
+            humanScore++;
+            console.log(`Computer's score: ${computerScore}`);
+            console.log(`Your score: ${humanScore}`);
+        }
+        else{
+            humanScore++;
+            console.log(`Computer's score: ${computerScore}`);
+            console.log(`Your score: ${humanScore}`);
+    }
+    }
+    return [computerScore, humanScore]
 }
-else if(winner==2){
-    computerScore++;
-    humanScore++;
-    console.log(`Computer's score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+
+
+let result = playGame()
+let computerScore = result[0];
+let humanScore = result[1];
+console.log(`COMPUTER'S FINAL SCORE: ${computerScore}`);
+console.log(`YOUR FINAL SCORE: ${humanScore}`);
+if(computerScore>humanScore){
+    console.log("FINAL RESULT: COMPUTER WINS THE GAME!");
+}
+else if(humanScore>computerScore){
+    console.log("FINAL RESULT: YOU WON THE GAME!");
 }
 else{
-    humanScore++;
-    console.log(`Computer's score: ${computerScore}`);
-    console.log(`Your score: ${humanScore}`);
+    console.log("FINAL RESULT: IT'S A TIE!");
 }
+
 
 
