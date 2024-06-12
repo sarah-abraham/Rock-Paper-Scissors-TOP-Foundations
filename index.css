@@ -6,8 +6,10 @@ body{
     background-color: #EAC5B0;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0px;
 }
 
 .container{
@@ -15,18 +17,112 @@ body{
     border: 10px dotted #43DDE2;
     border-radius: 10px;
     width: 80vw;
-    height: 40vw;
+    height: 35vw;
     margin: 2%;
     text-align: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
 }
 
 .container-title{
-    font-size: 100px;
+    font-size: 30px;
     color: #F9F940;
+    margin-top: 0px;
+    padding-top : 0px;
 }
 
-.container-text{
-    font-size: 30px;
+.instructions{
+    margin:0px;
+    font-size: 15px;
     color: #011064;
+    font-weight: 700;
+}
+
+.game-container{
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    color:#011064;
+    font-weight: 600;
+    justify-content: space-evenly;
+}
+
+.vertical-line{
+    border-left: 10px dashed #43DDE2;
+    height: 400px;
+    position: absolute;
+}
+
+.human-container, .computer-container{
+    margin:5%;
+}
+
+.human-container{
+    margin-left:0px;
+}
+
+.computer-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.computer-input-label{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.human-input,  .submit-button{
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+    border: 2px solid white;
+}
+
+
+
+.submit-button{
+    margin: 5%;
+    height: fit-content;
+    width: fit-content;
+    padding: 5%;
+    background-color: #43DDE2;
+    color:#011064;
+    font-size: 15px;
+}
+
+.human-score-container, .computer-score-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.human-score-card, .computer-score-card{
+    height: 80px;
+    width: 100px;
+    background-color: #43DDE2;
+    border-radius: 10px;
+    border: 6px solid white;
+    box-sizing: border-box;
+    color:#011064;
+    font-size: 20px;
+    padding: 2%;
+    text-align: center;
+}
+.human-score-container{
+    margin-top: 3%;
+    position: absolute;
+}
+.computer-score-container{
+    margin-top: 12%;
+    position: absolute;
+}
+
+.result{
+    margin: 0px;
+    color:#011064;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }

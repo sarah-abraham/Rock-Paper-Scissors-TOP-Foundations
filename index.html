@@ -9,7 +9,40 @@
 <body>
     <div class="container">
         <h1 class="container-title"> Rock Paper Scissors</h1>
-        <p class="container-text">Please check the console for the result. Thanks! </p>
+        <div class="instructions">
+            <p class="container-text">The game will have 5 rounds. You can type rock, paper or scissor in the given textbox to play the game.</p>
+        </div> 
+         <div class="game-container">
+            <div class="human-container">
+                <label for="human-input" class="human-input-label"> You: </label>
+                <br>
+                <input type="text" name="human-input" id="human-id" class="human-input">
+                <br>
+                <button type="submit" class="submit-button" id="submit-button-id"> Submit Choice </button>
+                <div class="human-score-container">
+                    <h3 class="score-label">Score: </h3>
+                    <div class="human-score-card">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line">
+            </div>
+            <div class="computer-container">
+                <p class="computer-input-label"> Computer: </p>
+                <div class="computer-input" id="computer-id">
+                </div>
+                <div class="computer-score-container">
+                    <h3 class="score-label">Score: </h3>
+                    <div class="computer-score-card">
+                        
+                    </div>
+                </div>
+            </div>
+           
+         </div>
+    </div> 
+    <div class="result">
     </div>
     <script src="./index.js"> </script>
 </body>
