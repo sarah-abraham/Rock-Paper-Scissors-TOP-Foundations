@@ -10,15 +10,19 @@
     <div class="container">
         <h1 class="container-title"> Rock Paper Scissors</h1>
         <div class="instructions">
-            <p class="container-text">The game will have 5 rounds. You can type rock, paper or scissor in the given textbox to play the game.</p>
+            <p class="container-text">The game will have 5 rounds. You can click on the rock, paper or scissors button to play the game.</p>
         </div> 
          <div class="game-container">
             <div class="human-container">
-                <label for="human-input" class="human-input-label"> You: </label>
-                <br>
-                <input type="text" name="human-input" id="human-id" class="human-input">
-                <br>
-                <button type="submit" class="submit-button" id="submit-button-id"> Submit Choice </button>
+                <p class="human-input-label"> You: </p>
+                <!-- <input type="text" name="human-input" id="human-id" class="human-input">
+                <br> -->
+                <div class="playing-options">
+                    <button class="rock-button" id="rock-button-id"> Rock </button>
+                    <button class="paper-button" id="paper-button-id"> Paper </button>
+                    <button class="scissors-button" id="scissors-button-id"> Scissors </button>
+                </div>
+            
                 <div class="human-score-container">
                     <h3 class="score-label">Score: </h3>
                     <div class="human-score-card">

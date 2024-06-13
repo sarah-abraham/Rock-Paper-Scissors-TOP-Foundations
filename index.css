@@ -22,7 +22,6 @@ body{
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
 }
 
 .container-title{
@@ -55,40 +54,53 @@ body{
 }
 
 .human-container, .computer-container{
-    margin:5%;
+    /* margin:5%; */
+    width: fit-content
 }
 
 .human-container{
     margin-left:0px;
 }
 
+
 .computer-container{
+    margin-top: 2.5%;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
+
+.playing-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
 .computer-input-label{
     margin-top: 0px;
     margin-bottom: 10px;
 }
-.human-input,  .submit-button{
+
+.computer-input{
+    color: black;
+    font-size: 20px;
+    margin-top: 16%;
+}
+
+button{
     border-radius: 10px;
     height: 30px;
     width: 250px;
     border: 2px solid white;
-}
-
-
-
-.submit-button{
     margin: 5%;
     height: fit-content;
     width: fit-content;
     padding: 5%;
     background-color: #43DDE2;
     color:#011064;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .human-score-container, .computer-score-container{
@@ -101,9 +113,9 @@ body{
 .human-score-card, .computer-score-card{
     height: 80px;
     width: 100px;
-    background-color: #43DDE2;
+    background-color: #F9F940;
     border-radius: 10px;
-    border: 6px solid white;
+    border: 6px solid #43DDE2;
     box-sizing: border-box;
     color:#011064;
     font-size: 20px;
@@ -111,8 +123,8 @@ body{
     text-align: center;
 }
 .human-score-container{
-    margin-top: 3%;
-    position: absolute;
+    margin-top: 22%;
+    
 }
 .computer-score-container{
     margin-top: 12%;
